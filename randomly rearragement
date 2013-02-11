@@ -1,0 +1,6 @@
+OS.ratio.random<-matrix(data=NA,nrow=18983,ncol=12)
+for (i in 1:18983){
+OS.ratio.random[i,1:6]=permute(OS.ratio[i,1:6])
+OS.ratio.random[i,7:12]=permute(OS.ratio[i,7:12])}
+
+rownames(OS.ratio.random)=rownames(OS.ratio)
