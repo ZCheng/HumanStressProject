@@ -1,0 +1,21 @@
+OStwot<-t(OS[,2:7])
+OSzero<-t(OS[,8:13])
+OSpthree<-t(OS[,14:19])
+OSpfive<-t(OS[,20:25])
+OSpseven<-t(OS[,26:31])
+OSthreet<-t(OS[,32:37])
+Rs<-matrix(data=NA, nrow=nrow(OS),ncol=5)
+Rp<-matrix(data=NA, nrow=nrow(OS),ncol=5)
+for (i in 1:nrow(OS)){}
+for (i in 1:nrow(OS)){
+Rs[i,1]<-cor(OStwot[,i],OSthreet[,i],method='spearman')
+Rs[i,2]<-cor(OStwot[,i],OSzero[,i],method='spearman')
+Rs[i,3]<-cor(OStwot[,i],OSpthree[,i],method='spearman')
+Rs[i,4]<-cor(OStwot[,i],OSpfive[,i],method='spearman')
+Rs[i,5]<-cor(OStwot[,i],OSpseven[,i],method='spearman')
+Rp[i,1]<-cor(OStwot[,i],OSthreet[,i],method='pearson')
+Rp[i,2]<-cor(OStwot[,i],OSzero[,i],method='pearson')
+Rp[i,3]<-cor(OStwot[,i],OSpthree[,i],method='pearson')
+Rp[i,4]<-cor(OStwot[,i],OSpfive[,i],method='pearson')
+Rp[i,5]<-cor(OStwot[,i],OSpseven[,i],method='pearson')
+}
