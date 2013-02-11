@@ -1,0 +1,18 @@
+a1<-ggplot()+
+geom_density(data=Rs,aes(x=Rs.OS2.OS3,colour='Rs.OS2.OS3'))+
+geom_density(data=Rs,aes(x=Rs.PC1.0,colour='Rs.PC1.0'))+
+geom_density(data=Rs,aes(x=Rs.PC1.0.3,colour='Rs.PC1.0.3'))+
+geom_density(data=Rs,aes(x=Rs.PC1.0.5,colour='Rs.PC1.0.5'))+
+geom_density(data=Rs,aes(x=Rs.PC1.0.7,colour='Rs.PC1.0.7'))+
+guides(colour=guide_legend(title=''))+
+opts(title='Density of Rs, OS2vsOS3')
+
+a2<-ggplot()+
+geom_density(data=Rp,aes(x=Rp.OS2.OS3,colour='Rp.OS2.OS3'))+
+geom_density(data=Rp,aes(x=Rp.PC1.0,colour='Rp.PC1.0'))+
+geom_density(data=Rp,aes(x=Rp.PC1.0.3,colour='Rp.PC1.0.3'))+
+geom_density(data=Rp,aes(x=Rp.PC1.0.5,colour='Rp.PC1.0.5'))+
+geom_density(data=Rp,aes(x=Rp.PC1.0.7,colour='Rp.PC1.0.7'))+
+guides(colour=guide_legend(title=''))+
+opts(title='Density of Rp, OS2vsOS3')
+grid.arrange(a1,a2,ncol=2,nrow=1)
