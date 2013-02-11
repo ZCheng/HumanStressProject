@@ -1,0 +1,12 @@
+dim(OS.ratio)
+
+gnames<-rownames(OS.ratio)
+assay<-rep(c('OS2','OS3'),each=6)
+time.grp<-rep(c(1:6),2)
+size<-rep(2,18983)
+
+#calculate the MB-statistics and T2 statistics and plot individual genes of interest.
+out1<-mb.long(OS,times=6,reps=size)
+out2<-mb.long(OS,times=6,reps=size,rep.grp=assay,time.grp=time.grp)
+
+plotProfile(out2,type='b',gnames=gnames,legloc=c(0.5,14),pch=c('OS2','OS3'),xlab='hour',ranking=1)
