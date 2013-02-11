@@ -16,3 +16,5 @@ geom_density(data=Rp,aes(x=Rp.PC1.0.7,colour='Rp.PC1.0.7'))+
 guides(colour=guide_legend(title=''))+
 opts(title='Density of Rp, OS2vsOS3')
 grid.arrange(a1,a2,ncol=2,nrow=1)
+================================================
+plot (density(MyData$Column1))
